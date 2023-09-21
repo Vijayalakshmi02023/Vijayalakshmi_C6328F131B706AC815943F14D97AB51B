@@ -1,22 +1,20 @@
-# Define the Player class
-class Player:
-    def play(self):
-        print("The player is playing cricket")
+# Linear Search in Python
 
-# Define the Batsman class that inherits from Player
-class Batsman(Player):
-    def play(self):
-        print("The batsman is batting")
 
-# Define the Bowler class that inherits from Player
-class Bowler(Player):
-    def play(self):
-        print("The bowler is bowling")
+def linearSearch(array, n, x):
 
-# Create objects of the Batsman and Bowler classes
-batsman = Batsman()
-bowler = Bowler()
+  # Going through array sequencially
+  for i in range(0, n):
+    if (array[i] == x):
+      return i
+  return -1
 
-# Call the play() method for each object
-batsman.play()
-bowler.play()
+
+array = [2, 4, 0, 1, 9]
+x = 1
+n = len(array)
+result = linearSearch(array, n, x)
+if (result == -1):
+  print("Element not found")
+else:
+  print("Element found at index: ", result)
