@@ -1,36 +1,17 @@
-# Python3 program to calculate the CGPA
-# and CGPA percentage of a student
-def CgpaCalc(marks, n):
+m# Factorial of a number using recursion
 
-  # Variable to store the grades in
-  # every subject
-  grade = [0] * n
+def recur_factorial(n):
+   if n == 1:
+       return n
+   else:
+       return n*recur_factorial(n-1)
 
-  # Variables to store CGPA and the
-  # sum of all the grades
-  Sum = 0
+num = 7
 
-  # Computing the grades
-  for i in range(n):
-    grade[i] = (marks[i] / 10)
-
-  # Computing the sum of grades
-  for i in range(n):
-    Sum += grade[i]
-
-  # Computing the CGPA
-  cgpa = Sum / n
-
-  return cgpa
-
-
-# Driver code
-n = 5
-marks = [90, 80, 70, 80, 90]
-
-cgpa = CgpaCalc(marks, n)
-
-print("CGPA = ", '%.1f' % cgpa)
-print("CGPA Percentage = ", '%.2f' % (cgpa * 9.5))
-
-# This code is contributed by divyeshrabadiya07
+# check if the number is negative
+if num < 0:
+   print("Sorry, factorial does not exist for negative numbers")
+elif num == 0:
+   print("The factorial of 0 is 1")
+else:
+   print("The factorial of", num, "is", recur_factorial(num))
